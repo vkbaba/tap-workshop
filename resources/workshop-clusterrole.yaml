@@ -34,7 +34,7 @@ rules:
     verbs: ["*"]
   - apiGroups:
       - tekton.dev
-    resources: ["taskruns"]
+    resources: ["*"]
     verbs: ["*"]
   - apiGroups:
       - v1
