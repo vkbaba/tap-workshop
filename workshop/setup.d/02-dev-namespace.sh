@@ -34,30 +34,37 @@ spec:
             echo "Skip Test :)"
 EOF
 
-cat << EOF | kubectl apply -f -
+cat << EOF | kubectl -n $SESSION_NAMESPACE apply -f -
 apiVersion: scanning.apps.tanzu.vmware.com/v1beta1
 kind: ScanPolicy
 metadata:
   name: scan-policy
+  labels:
+    'app.kubernetes.io/part-of': 'component-a'
 spec:
   regoFile: |
     package main
+
     # Accepted Values: "Critical", "High", "Medium", "Low", "Negligible", "UnknownSeverity"
-    notAllowedSeverities := ["Critical","High"]
-    ignoreCves := ["CVE-2021-26291", "GHSA-g36h-6r4f-3mqp", "CVE-2016-1000027"]
+    notAllowedSeverities := ["Critical","High","UnknownSeverity"]
+    ignoreCves := ["CVE-2016-1000027", "GHSA-3mc7-4q67-w48m"]
+
     contains(array, elem) = true {
       array[_] = elem
     } else = false { true }
+
     isSafe(match) {
       severities := { e | e := match.ratings.rating.severity } | { e | e := match.ratings.rating[_].severity }
       some i
       fails := contains(notAllowedSeverities, severities[i])
       not fails
     }
+
     isSafe(match) {
       ignore := contains(ignoreCves, match.id)
       ignore
     }
+
     deny[msg] {
       comps := { e | e := input.bom.components.component } | { e | e := input.bom.components.component[_] }
       some i
@@ -72,5 +79,5 @@ spec:
 EOF
 
 #if no label secretimports reconciliation fails
-kubectl annotate namespace ${SESSION_NAMESPACE} secretgen.carvel.dev/excluded-from-wildcard-matching-
+kubectl annotate namespace ${SESSION_NAMESPACE} secretgen.carvel.dev/excluded-from-wildcard-matching
 
