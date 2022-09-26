@@ -108,8 +108,7 @@ rules:
       - get
       - watch
       - list
-  - apiGroups:
-      - packaging.carvel.dev # To install scantemplate
-    resources: ["*"]
-
+  - apiGroups: [scanning.apps.tanzu.vmware.com]
+    resources: ['imagescans', 'sourcescans']
+    verbs: ['*']
   
