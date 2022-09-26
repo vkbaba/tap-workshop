@@ -108,6 +108,8 @@ rules:
       - get
       - watch
       - list
-
+  - apiGroups:
+      - packaging.carvel.dev # To install scantemplate
+    resources: ["*"]
 
   
