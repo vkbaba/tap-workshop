@@ -78,5 +78,5 @@ spec:
     }
 EOF
 
-#if no label secretimports reconciliation fails
-
+#if anotation exists secretimports reconciliation fails
+kubectl annotate namespace ${SESSION_NAMESPACE} secretgen.carvel.dev/excluded-from-wildcard-matching-
