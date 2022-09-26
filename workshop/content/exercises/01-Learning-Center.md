@@ -1,14 +1,14 @@
-We're going to start our story with Cody, an application developer. His company is now running Tanzu Application Platform, and Cody wants to start using the platform to deliver containerized applications.
+今回は、アプリケーション開発者である Cody のストーリーを基にラボを進めます。彼の会社では現在 Tanzu Application Platform が稼働しており、Cody はこのプラットフォームを使ってコンテナ化したアプリケーションの配信を始めたいと考えています。
 
 ![Cody Languages](images/cody.png)
 
-If you want to see what Cody's first step is in using Tanzu Application Platform, well.. you're already doing it! Cody logs into Learning Center, the online workshop environment you are using now, to get Day One training on how to be productive in Tanzu Application Platform.
+Cody は Tanzu Application Platform を使うにあたっての最初のステップとして、今皆さんが使用しているオンラインワークショップ環境である Learning Center にログインし、Tanzu Application Platform の生産性を高めるための初日トレーニングを受講済です。
 
-With Learning Center, Cody can get up to speed on his company's best practices and procedures for developing applications. But Cody won't just be reading static content here, and neither will you. Learning Center provides terminal session windows, a fully functioning IDE, and more. In this environment, Cody can explore, experiment, and make mistakes in a live environment without hurting a thing.
+Learning Centerを活用することで、アプリケーション開発のための会社のベストプラクティスや手順を知ることができます。しかし、Cody や皆さんはここでドキュメントなどのコンテンツを読むだけではなく、Learning Center が提供するターミナルセッションウィンドウや IDE などを活用して、実際の環境に影響を与えることなく、ラボ環境の中で Tanzu Application Platform の実際の機能を試したり、失敗しながら学ぶことが可能です。
 
-It's very easy for Cody's company to author and customize Learning Center workshops to create enablement specific to their enterprise. It's as easy as writing a README for a Git repository.
+Cody の会社では、Learning Center のワークショップを作成し、カスタマイズすることで、その企業に特化した教育が非常に簡単に行えるようになりました。Gitレポジトリの README を書くのと同じくらい簡単です。
 
-You'll see a lot more of Learning Center as we progress, but let's get comfortable using the terminal. On one of the terminal windows to the right, type a Linux shell command, or click in the textbox below to have Learning Center execute a command for you.
+これからワークショップを通して Learning Center を使っていくにあたって、まずはターミナルを使いやすくしていきましょう。右側のターミナルウィンドウで Linux シェルコマンドを入力するか、下のテキストボックスをクリックして Learning Center がコマンドを実行してくれるようにします。
 
 ```execute
 kubectl config get-contexts eduk8s
