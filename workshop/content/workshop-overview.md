@@ -1,4 +1,4 @@
-# Tanzu Application Platform 開発者体験ワークショップ
+## Tanzu Application Platform 開発者体験ワークショップ
 このワークショップでは、Chrome、Edge、またはFirefoxブラウザを使用することをお勧めします。
 
 **Tanzu Application Platform (TAP)**は、Kubernetesの上に**開発者体験**を提供することを可能にします。事業者は、開発者にプラットフォームを意識したアプリケーションを書かせるのではなく、**アプリケーションを意識したプラットフォーム**をカスタマイズしてデプロイすることができます。
