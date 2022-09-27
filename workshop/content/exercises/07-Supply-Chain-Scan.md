@@ -18,7 +18,7 @@ url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/supply-chain
 ```
 
 ```execute
-tanzu apps workload apply spring-music- \
+tanzu apps workload apply spring-music \
   --app spring-music \
   --git-repo https://github.com/tanzu-japan/spring-music \
   --git-branch vulnerability-demo \
