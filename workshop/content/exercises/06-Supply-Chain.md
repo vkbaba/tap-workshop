@@ -8,6 +8,8 @@ url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/supply-chain
 
 開発者（あなた）の名前空間は **{{session_namespace}}** です。
 
+![sc-gui](images/sc-gui.png)
+
 サプライチェーンは確認できましたか？今回はsource-to-url というTAP 組み込みの最もシンプルなサプライチェーンを使ってデプロイされています。このサプライチェーンは、その名の通りソースコードを入力として、最終的にURL として公開しているのですが、間にいくつかステップがあります。例えばImage Builder ではソースコードからTanzu Build Service を使ってコンテナイメージを作成するステップになります。Config Provider はConvention Services と呼ばれる仕組みで、サプライチェーンの中で推奨設定値をマニフェストに埋め込むことができます。App Config ステップでは、Knativeサービング、サービスバインディング、リソースクレーム、Kubernetes のConfigmap を作成します。Config Writer ステップでは追加の設定ファイルをイメージのレポジトリやgit リポジトリに作成します。Pull Config は設定値の取得、そして最後にDelivery ステップで作成したアプリケーションがKubernetes 上にknative オブジェクトとして展開され、URL としてアクセスできるようになります。
 
 一般的なCI/CD パイプラインとの違いは何でしょうか？
