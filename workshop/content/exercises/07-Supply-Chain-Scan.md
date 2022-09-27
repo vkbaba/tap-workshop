@@ -22,7 +22,7 @@ tanzu apps workload apply spring-music-demo \
 ワークロードの状態を確認し、Ready になるまで数分待ちます。
 
 ```execute-2 
-tanzu apps workload get spring-music
+tanzu apps workload get spring-music-demo
 ```
 
 下記のような出力がされます。
