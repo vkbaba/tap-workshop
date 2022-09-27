@@ -6,11 +6,7 @@ url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/supply-chain
 
 自分が展開したもの以外にたくさんのアプリケーションが見えるかもしれませんが、他の受講者のアプリケーションもここでは見えるため、自分のセッションの名前空間にデプロイされたspring-sensors を選択してください。
 
-自分の名前空間の名前は下記コマンドで確認できます。
-
-```execute
-echo $SESSION_NAMESPACE
-```
+開発者（あなた）の名前空間は **{{session_namespace}}** です。
 
 サプライチェーンは確認できましたか？今回はsource-to-url というTAP 組み込みの最もシンプルなサプライチェーンを使ってデプロイされています。このサプライチェーンは、その名の通りソースコードを入力として、最終的にURL として公開しているのですが、間にいくつかステップがあります。例えばImage Builder ではソースコードからTanzu Build Service を使ってコンテナイメージを作成するステップになります。Config Provider はConvention Services と呼ばれる仕組みで、サプライチェーンの中で推奨設定値をマニフェストに埋め込むことができます。App Config ステップでは、Knativeサービング、サービスバインディング、リソースクレーム、Kubernetes のConfigmap を作成します。Config Writer ステップでは追加の設定ファイルをイメージのレポジトリやgit リポジトリに作成します。Pull Config は設定値の取得、そして最後にDelivery ステップで作成したアプリケーションがKubernetes 上にknative オブジェクトとして展開され、URL としてアクセスできるようになります。
 
