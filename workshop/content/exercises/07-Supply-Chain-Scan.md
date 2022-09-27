@@ -1,8 +1,8 @@
 先ほどはLive Update の機能でアプリケーションをデプロイしましたが、今度はtanzu コマンドでデプロイしてみましょう。下記コマンドを入力してみてください。
 
 ```execute
-tanzu apps workload apply spring-music \
-  --app spring-music \
+tanzu apps workload apply spring-music-demo \
+  --app spring-music-demo \
   --git-repo https://github.com/tanzu-japan/spring-music \
   --git-branch tanzu \
   --type web \
@@ -28,28 +28,27 @@ tanzu apps workload get spring-music
 下記のような出力がされます。
 
 ```
-[~] $ tanzu apps workload get spring-music
-# spring-music: Ready
-
+[~] $ tanzu apps workload get spring-music-demo
+# spring-music-demo: Ready
 ---
-lastTransitionTime: "2022-09-27T12:32:34Z"
+lastTransitionTime: "2022-09-27T13:37:38Z"
 message: ""
 reason: Ready
 status: "True"
 type: Ready
 
 Pods
-NAME                                             STATUS      RESTARTS   AGE
-scan-spring-music-6rvjl-lntjm                    Succeeded   0          3m36s
-scan-spring-music-s5stf-fwtzc                    Succeeded   0          7m21s
-spring-music-00001-deployment-664bfdfddc-8s77h   Running     0          91s
-spring-music-build-1-build-pod                   Succeeded   0          6m55s
-spring-music-config-writer-bjfcp-pod             Succeeded   0          2m41s
-spring-music-qqf7k-test-pod                      Succeeded   0          7m29s
+NAME                                                  STATUS      RESTARTS   AGE
+scan-spring-music-demo-bm25v-rr86c                    Succeeded   0          11m
+scan-spring-music-demo-xmxxg-qw8jw                    Succeeded   0          7m24s
+spring-music-demo-00001-deployment-86697f96c5-tvv2c   Running     0          4m59s
+spring-music-demo-build-1-build-pod                   Succeeded   0          10m
+spring-music-demo-config-writer-w88jq-pod             Succeeded   0          6m11s
+spring-music-demo-mwmgl-test-pod                      Succeeded   0          11m
 
 Knative Services
-NAME           READY   URL
-spring-music   Ready   http://spring-music.tap-demos-w01-s002.app.vpantry.net
+NAME                READY   URL
+spring-music-demo   Ready   http://spring-music-demo.tap-demos-w01-s001.app.vpantry.net
 ```
 
 その間にサプライチェーンがどのような状態になっているか、TAP-GUI を確認してみましょう。
