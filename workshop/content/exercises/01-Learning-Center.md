@@ -13,5 +13,3 @@ Cody の会社では、Learning Center のワークショップを作成し、�
 ```execute
 kubectl config get-contexts eduk8s
 ```  
-
-Test Message
