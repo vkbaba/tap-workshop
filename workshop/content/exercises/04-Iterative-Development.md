@@ -33,6 +33,8 @@ spring-sensors   Ready   http://spring-sensors-tap-demos-w07-s003.tap.corby.cc
 ```
 ターミナルウィンドウで URL をクリックすると、アプリケーションが表示されます。
 
+**Ready になる前に次に進まないでください。**
+
 では、ここからはアプリケーションのコードを変更してみましょう。現在、バナーのテキストは「Spring Sensors」と表示されています。バナーを他のものに変更してみましょう。
 
 ```editor:select-matching-text
