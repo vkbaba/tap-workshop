@@ -1,12 +1,12 @@
-# Tanzu Application Platform Live Demonstration
-_We recommend you use Chrome, Edge, or Firefox browsers in this workshop for the smoothest experience._
+# Tanzu Application Platform 開発者体験ワークショップ
+このワークショップでは、Chrome、Edge、またはFirefoxブラウザを使用することをお勧めします。
 
-**Tanzu Application Platform (TAP)** enables enterprises to deliver a **developer experience** atop Kubernetes. Operators are able to customize and deploy an **application-aware platform**, instead of requiring developers to write platform-aware applications. 
+**Tanzu Application Platform (TAP)**は、Kubernetesの上に**開発者体験**を提供することを可能にします。事業者は、開発者にプラットフォームを意識したアプリケーションを書かせるのではなく、**アプリケーションを意識したプラットフォーム**をカスタマイズしてデプロイすることができます。
 
-Tanzu Application Platform abstracts away the mechanics of container orchestration, secure software supply chains, and GitOps deployment/promotion models. It allows developers to focus purely on the authoring of business logic, user interfaces, and APIs. Meanwhile, the operations teams can declare compliant delivery processes that will be implemented, in a consistent, automated, repeatable manner to each new application workload that is onboarded.
+Tanzu Application Platformは、コンテナオーケストレーション、セキュアなソフトウェアサプライチェーン、GitOpsデプロイメント/プロモーションモデルなどの仕組みを抽象化します。これにより、開発者はビジネスロジック、ユーザーインターフェース、APIのオーサリングのみに集中することができます。一方、運用チームは、新しいアプリケーションを導入するたびに、一貫性のある自動化された反復可能な方法で実装される、準拠したデリバリー・プロセスを宣言することができます。
 
 <img alt="TAP Overview Diagram" height="90%" src="exercises/images/tap-overview.png" width="90%"/>
 
-This demonstration will show how development teams and operators will interact with the platform to enable iterative development cycles, and secure, automated delivery to production.
+このデモでは、開発チームとオペレーターがプラットフォームとどのように関わり、反復的な開発サイクルと、安全で自動化された本番環境への配信を可能にするのかを紹介します。
 
-You can always progress to the next part of the workshop by clicking the blue button in the right corner below. Click on the button labelled "Learning Center" to get started.
+下の右隅にある青いボタンをクリックすると、いつでもワークショップの次のパートに進むことができます。それではボタンをクリックして開始してください。
