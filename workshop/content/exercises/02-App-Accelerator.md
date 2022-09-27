@@ -18,7 +18,7 @@ url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/create
 
 ![Accelerator Templates](images/acc-templates.png)
 
-Spring Sensors テンプレートで作業してみましょう。Spring Sensors のタイルにある choose ボタンを押します。UI でプロジェクトテンプレートをカスタマイズするためのオプションパラメータが提供されていますが、デフォルトのまま**Next**を押してください。選択した内容を確認するプロンプトが表示されるので、**Generate Accelerator**をクリックします。
+Spring Sensors テンプレートで作業してみましょう。Spring Sensors のタイルにある choose ボタンを押します。ラボの都合上2 つSpring Sensors テンプレートが存在する場合がありますがどちらでも構いません。UI でプロジェクトテンプレートをカスタマイズするためのオプションパラメータが提供されていますが、デフォルトのまま**Next**を押してください。選択した内容を確認するプロンプトが表示されるので、**Generate Accelerator**をクリックします。
 
 Application Accelerator がプロジェクトテンプレートを作成し、テンプレートのブラウズまたはダウンロードのオプションが表示されます。"Explore Zip File "をクリックして、テンプレートを閲覧してみましょう。
 
