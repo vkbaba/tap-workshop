@@ -1,37 +1,37 @@
 modules:
     workshop-overview:
         name: Workshop Overview
-        exit_sign: Learning Center
+        exit_sign: Next
     exercises/01-Learning-Center:
         name: Learning Center
-        exit_sign: Application Accelerator
+        exit_sign: Next
     exercises/02-App-Accelerator:
         name: Application Accelerator
-        exit_sign: IDE Tools
+        exit_sign: Next
     exercises/03-IDE-Tools:
         name: IDE Tools
-        exit_sign: Iterative Development
+        exit_sign: Next
     exercises/04-Iterative-Development:
         name: Iterative Development
-        exit_sign: Live View
+        exit_sign: Next
     exercises/05-App-Live-View:
         name: Live View
-        exit_sign: Submitting the Build
-    exercises/06-Submitting-Build:
-        name: Submitting the Build
-        exit_sign: Workload
-    exercises/07-Workload:
-        name: Workload
-        exit_sign: Supply Chain
-    exercises/08-Supply-Chain:
+        exit_sign: Next
+    exercises/06-Supply-Chain:
         name: Supply Chain
-        exit_sign: Ongoing Compliance
-    exercises/09-Ongoing-Compliance:
-        name: Ongoing Compliance
-        exit_sign: Deliverable
-    exercises/10-Deliverable:
-        name: Deliverable
-        exit_sign: Conclusion
+        exit_sign: Next
+    exercises/07-Supply-Chain-Scan:
+        name: Supply Chain with Test and Image Scan
+        exit_sign: Next
+#     exercises/08-Supply-Chain:
+#         name: Supply Chain
+#         exit_sign: Ongoing Compliance
+#     exercises/09-Ongoing-Compliance:
+#         name: Ongoing Compliance
+#         exit_sign: Deliverable
+#     exercises/10-Deliverable:
+#         name: Deliverable
+#         exit_sign: Conclusion
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop
