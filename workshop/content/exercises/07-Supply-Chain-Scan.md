@@ -12,6 +12,10 @@ tanzu apps workload apply spring-music \
 ```  
 source-test-scan-to-url という別のサプライチェーンを使用
 アプリがデプロイされ、テスト、イメージのスキャンが実施
+サプライチェーンを確認
+```dashboard:open-url
+url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/supply-chain
+```
 
 ```execute
 tanzu apps workload apply spring-music- \
@@ -23,4 +27,9 @@ tanzu apps workload apply spring-music- \
   --annotation autoscaling.knative.dev/minScale=1 \
   -y
   ``` 
-  今度は失敗。
+  今度は失敗。同じく確認
+  ```dashboard:open-url
+url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/supply-chain
+```
+
+最後にSBOM 見せて終わり
