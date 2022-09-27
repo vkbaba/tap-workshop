@@ -24,6 +24,9 @@ tanzu apps workload apply spring-music \
 ```execute-2 
 tanzu apps workload get spring-music
 ```
+
+下記のような出力がされます。
+
 ```
 [~] $ tanzu apps workload get spring-music
 # spring-music: Ready
