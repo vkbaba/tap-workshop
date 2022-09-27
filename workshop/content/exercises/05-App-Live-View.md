@@ -1,29 +1,29 @@
-Sometimes an application isn't behaving quite like we'd expect after deployment, and we want to get more information about its runtime behavior, for diagnostics and troubleshooting. Is our application running out of memory? What was the response time for HTTP Requests?
+アプリケーションをデプロイした後、そのアプリケーションが期待通りの動作をせず、診断やトラブルシューティングのためにアプリケーションのランタイムの動作に関する詳細な情報（例えば、アプリケーションのメモリが不足しているのか？ HTTP リクエストのレスポンスタイムはどうなっているのか？）が必要になることがあります。
 
-Tanzu Application Platform provides Live View to help a developer like Cody gather that information. Let's take a look. We're going to access the Web UI known as TAP GUI, which can observe the deployment we just created:
+Tanzu Application Platform は、Cody のような開発者がそういった情報を収集するのに役立つ Live View を提供しています。ここからは Live View の機能について見てみましょう。まずは TAP GUI （Web UI） にアクセスし、先ほど作成したデプロイメントを確認してみましょう。
 
 ```dashboard:open-url
 url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/catalog/default/component/spring-sensors/workloads
 ```
 
-Here we are looking at running deployments of `spring-sensors`, our application. There's a good chance that you see more than one deployment listed! That's because we are in a multitenant development environment, and different developers (or different workshop sessions) are each working on their own branch of the code. In a multi-tenant development cluster (also known as an Iterate cluster in TAP), each developer works in their own namespace for isolation.
+ここでは、私たちのアプリケーションである `spring-sensors` のデプロイメントを実行しています。複数のデプロイがリストアップされている可能性が高いです。これはマルチテナント開発環境では、異なる開発者 (または異なるワークショップセッション) がそれぞれコードのブランチに取り組んでいるためです。マルチテナント開発クラスタ (TAP では Iterate クラスタとも呼ばれます) では、各開発者は開発環境を分離するために各自のネームスペースで作業しています。
 
-Your developer namespace is **{{session_namespace}}**. You can identify which `spring-sensors` app is yours by checking against the namespace column. You can filter the results by choosing your namespace in the namespace column.  Then click on the spring-sensors hyperlink in the row that corresponds to your namespace and the value `Knative Service` in the Kind column. This will bring you to a detail view of your app:
+開発者の名前空間は **{{session_namespace}}** です。namespace カラムを確認すると、どの`spring-sensors`アプリが自分のものかを識別することができます。また、namespace カラムで自分の namespace を選択することで、結果をフィルタリングすることができます。 次に、名前空間に対応する行の spring-sensors ハイパーリンクをクリックし、Kind 列の `Knative Service` という値をクリックします。これで、アプリの詳細ビューが表示されます。
 
 ![Component View](images/component-view.png)
 
-If you scroll down in this screen, you will see the Kubernetes resources associated with your app. At the bottom of the screen, you'll find Pods. In Kubernetes, a Pod is where your application container runs. Your pod will have a long, funny name, click on it:
+この画面を下にスクロールすると、アプリに関連する Kubernetes リソースが表示されます。画面の一番下には、Pod があります。Kubernetes では Pod はアプリケーションコンテナが実行される場所です。では、自分の Pod の名前をクリックしてみましょう。
 
 ![Pod View](images/pod-view.png)
 
-At the top of the pod info screen, you'll see a detail panel, that provides you quick access to key info about your process. If you click on "View Pod Logs", you will be able to see the application logs from the Kubernetes server where your app is running.
+Pod の情報が見られる画面の上部には、詳細情報が見られる画面へのリンクがあり、プロセスに関する主要な情報に素早くアクセスできます。View Pod Logs をクリックすると、アプリが動作している Kubernetes サーバーのアプリケーションログを見ることができます。
 
 ![Pod Detail](images/pod-detail.png)
 
-Scroll down a little bit, and you'll find our Live View pane. It has a menu drop-down called Information Category that allows you to navigate all sorts of data in your Application Runtime.
+少し下にスクロールすると、ライブビューペインが表示されます。ここには、Information Category というドロップダウンのメニューがあり、Application Runtime のあらゆるデータを閲覧することができます。
 
 ![Live View](images/live-view.png)
 
-Explore for a little bit, there's a lot to see here. You can check out your application's environment variables, view thread stacktraces, see a graphical view of your memory consumption, see trace info on each HTTP request, and much more.
+少しこれらのデータを好きに確認してみてください。ここには多くの見るべきものがあり、アプリケーションの環境変数のチェック、スレッドスタックトレースの表示、メモリ消費量のグラフ表示、各 HTTP リクエストのトレース情報など、様々な情報を見ることができます。
 
-Live View is currently compatible with Spring Boot Java applications, and Steeltoe .NET Core applications.
+Live View は現在、Spring Boot の Java アプリケーションと、Steeltoe .NET Core アプリケーションに対応しています。
