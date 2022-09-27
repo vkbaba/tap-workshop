@@ -8,8 +8,8 @@ modules:
     - exercises/03-IDE-Tools
     - exercises/04-Iterative-Development
     - exercises/05-App-Live-View
-    - exercises/06-Supplychain
-    - exercises/07-Supplychain-Scan
+    - exercises/06-Supply-Chain
+    - exercises/07-Supply-Chain-Scan
     - workshop-summary
     vars:
     - name: harbor_project_id
