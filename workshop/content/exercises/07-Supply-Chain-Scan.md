@@ -58,6 +58,8 @@ spring-music   Ready   http://spring-music.tap-demos-w01-s002.app.vpantry.net
 url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/supply-chain
 ```
 
+![sc-scan](images/sc-scan.png)
+
 source-to-url サプライチェーンと異なり、いくつか追加のステップがあることが分かります。今回はsource-test-scan-to-url サプライチェーンを使いましたが、これは[Tekton](https://tekton.dev/) によるテストや[Grype](https://github.com/anchore/grype) によるイメージスキャンが追加のステップとして定義されている組み込みのサプライチェーンになります。今回はTekton のテストは空ですが、当然カスタマイズすることができます。
 
 このように、サプライチェーンにセキュリティ機能を組み込むことで、より安全なアプリケーションをユーザーに提供することができます。
@@ -76,3 +78,5 @@ tanzu apps workload apply spring-music-vulnerability \
 ``` 
 
 こちらは展開が失敗します。イメージに深刻な脆弱性が含まれており、それを検知してデプロイを停止したことになります。もちろん、その後ソースコードを修正すれば、問題なくアプリケーションは展開されます。
+
+![sc-scan-fail](images/sc-scan-fail.png)
