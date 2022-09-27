@@ -81,7 +81,7 @@ EOF
 #if anotation exists secretimports reconciliation fails
 kubectl annotate namespace ${SESSION_NAMESPACE} secretgen.carvel.dev/excluded-from-wildcard-matching-
 
-METADATA_STORE_DOMAIN=metadata-store.${TAP_INGRESS}
+METADATA_STORE_DOMAIN=metadata-store.${INGRESS_DOMAIN}
 AUTH_TOKEN=$(kubectl get secret -n metadata-store metadata-store-read-only-token -otemplate='{{.data.token | base64decode}}')
 openssl s_client -servername ${METADATA_STORE_DOMAIN}  -connect  ${METADATA_STORE_DOMAIN}:443 < /dev/null 2> /dev/null | openssl x509 -outform PEM > metadata-store.crt
 tanzu insight config set-target https://${METADATA_STORE_DOMAIN} --ca-cert metadata-store.crt --access-token=${AUTH_TOKEN}
