@@ -1,4 +1,4 @@
-name: TAP Overview
+name: TAP ワークショップ
 
 modules:
     activate:
@@ -8,12 +8,26 @@ modules:
     - exercises/03-IDE-Tools
     - exercises/04-Iterative-Development
     - exercises/05-App-Live-View
-    - exercises/06-Submitting-Build
-    - exercises/07-Workload
-    - exercises/08-Supply-Chain
-    - exercises/09-Ongoing-Compliance
-    - exercises/10-Deliverable
+    - exercises/06-Supplychain
+    - exercises/07-Supplychain-Scan
     - workshop-summary
     vars:
     - name: harbor_project_id
       value: "9999"
+# modules:
+#     activate:
+#     - workshop-overview
+#     - exercises/01-Learning-Center
+#     - exercises/02-App-Accelerator
+#     - exercises/03-IDE-Tools
+#     - exercises/04-Iterative-Development
+#     - exercises/05-App-Live-View
+#     - exercises/06-Submitting-Build
+#     - exercises/07-Workload
+#     - exercises/08-Supply-Chain
+#     - exercises/09-Ongoing-Compliance
+#     - exercises/10-Deliverable
+#     - workshop-summary
+#     vars:
+#     - name: harbor_project_id
+#       value: "9999"
